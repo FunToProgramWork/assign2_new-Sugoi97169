@@ -18,6 +18,8 @@ int lifex =10;
 int sx=-80,sy;
 
 int fo =1;
+int foodx=0,foody=0;
+
 void setup(){
   size(640,480,P2D);
  start = loadImage("img/title.jpg");
@@ -53,8 +55,9 @@ void draw(){
      image(soil,0,160);
      image(life,lifex,10);
      image(life,lifex+60,10);
-     if(fo==1){foodpos();}
-   
+     
+     if(fo==1){foodpos(); }
+   image( food, foodx, foody);
      keyPressed();
      sun();
      soilder();
@@ -114,7 +117,7 @@ image( ratImg, ratx, raty);
 void foodpos(){
 int a = (int)random(4);
 int b = (int)random(9);
-int foodx=0,foody=0;
+
 switch(a){
  case 0:
       foody=160;
@@ -159,7 +162,6 @@ switch(b){
       foodx=640;
              break;
 }
- image( food, foodx, foody);
+fo--;
  
 }
-
