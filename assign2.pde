@@ -90,10 +90,11 @@ void ran(){
 }
 void sun(){
  fill(255,255,0);
- circle(590, 50, 130);  
+ ellipse(590, 50, 130, 130);
+ 
   
   fill(253,184,19);
-  circle(590, 50, 120);
+ ellipse(590, 50, 120, 120);
 }
 
 void mousePressed(){
