@@ -15,6 +15,7 @@ PImage buttsh;
 PImage buttrh;
 int game=0;
 int lifex =10;
+int lifen =2;
 int sx=-80,sy;
 
 int fo =1;
@@ -61,8 +62,18 @@ void draw(){
      keyPressed();
      sun();
      soilder();
+     
 }
-  
+
+ if(lifen==0){
+ 
+ image(gameover,0,0);
+ image(buttrh,248,360);
+ if(mouseX<=248||mouseX>=392&&mouseY<=360||mouseY>=420){
+ image(buttr,248,360);
+ 
+ }
+ } 
 }
 
 void soilder(){
